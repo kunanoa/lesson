@@ -15,7 +15,7 @@ end
 
 class ChildPeople < People
 
-  def self.Beam
+  def self.beam
     puts "私は目からビームが出せます"
   end
 end
