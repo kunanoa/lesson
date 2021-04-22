@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_secure_password
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-zA-Z])(?=.*?[\d])[a-zA-Z\d]{8,32}\z/
   validates :password, format: { with: VALID_PASSWORD_REGEX }
+  
+  has_many :topics
 end
