@@ -13,10 +13,12 @@
             <%= link_to favorites_path(topic_id: topic.id), method: :delete do %> 
               <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon topic-index-icon-red' %>
             <% end %>
+            <%= topic.counts %>
           <% else %>
             <%= link_to favorites_path(topic_id: topic.id), method: :post do %> 
               <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon' %>
             <% end %>
+            <%= topic.counts %>
           <% end %>
           
           <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>

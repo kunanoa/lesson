@@ -14,6 +14,7 @@ class FavoritesController < ApplicationController
   
   def create
     create_favorite_instance
+    @favorite.favorite_count_plus
     
     if @favorite.save
       redirect_to topics_path, success: 'お気に入りに登録しました'
@@ -24,6 +25,7 @@ class FavoritesController < ApplicationController
   
   def delete
     create_favorite_instance
+    @favorite.favorite_count_minus
     
     if @favorite.delete_record
       redirect_to request.referer, success: 'お気に入りを削除しました'
